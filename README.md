@@ -4,7 +4,7 @@ This is the source code for my personal website, built with [Astro](https://astr
 
 ## About
 
-I'm Prashant Bhushan, an iOS developer, entrepreneur, and open source contributor. This website hosts my personal blog and information about my work.
+I'm Prashant Bhushan, a learner. This website hosts my personal blog and information about my work.
 
 ## Project Structure
 
@@ -42,15 +42,6 @@ I'm Prashant Bhushan, an iOS developer, entrepreneur, and open source contributo
 
 This site is set up for easy deployment on Vercel. Just connect your GitHub repository to Vercel, and it will automatically build and deploy the site when changes are pushed.
 
-## License
-
-This repository uses dual licensing:
-
-- **Documentation & Blog Posts**: Licensed under [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/)
-- **Code & Code Snippets**: Licensed under the [MIT License](LICENSE)
-
-See the [LICENSE](LICENSE) file for full details.
-
 ## Special Thanks
 
-Special thanks to [Sat Naing](https://github.com/satnaing) for creating the excellent [AstroPaper theme](https://astro-paper.pages.dev/) that served as the foundation for this website. Their thoughtful design and clean architecture made it a joy to build upon.
+Special thanks to [Sat Naing](https://github.com/satnaing)
