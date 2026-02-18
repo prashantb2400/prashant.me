@@ -31,11 +31,11 @@ interface Site {
 
 // Site configuration
 export const SITE: Site = {
-  website: "https://steipete.me/",
-  author: "Peter Steinberger",
-  profile: "https://steipete.me/about",
+  website: "https://prashantbasthana.me/",
+  author: "Prashant Bhushan",
+  profile: "https://prashantbasthana.me/about",
   desc: "AI-powered tools from Swift roots to web frontiers. Every commit lands on GitHub for you to fork & remix.",
-  title: "Peter Steinberger",
+  title: "Prashant Bhushan",
   ogImage: "peter-avatar.jpg",
   lightAndDarkMode: true,
   postPerIndex: 10,
@@ -46,11 +46,11 @@ export const SITE: Site = {
   editPost: {
     enabled: true,
     text: "Edit on GitHub",
-    url: "https://github.com/steipete/steipete.me/edit/main/",
+    url: "https://github.com/prashantb2400/prashant.me/edit/main/",
   },
   dynamicOgImage: true,
   lang: "en",
-  timezone: "America/Los_Angeles",
+  timezone: "Asia/Kolkata",
 };
 
 export const SITE_TITLE = SITE.title;
@@ -71,15 +71,15 @@ export const NAV_LINKS: SocialLink[] = [
 // Social media links
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    href: "https://github.com/steipete",
+    href: "https://github.com/prashantb2400",
     label: "GitHub",
   },
   {
-    href: "https://twitter.com/steipete",
+    href: "https://twitter.com/knightofslights",
     label: "Twitter",
   },
   {
-    href: "https://bsky.app/profile/steipete.me",
+    href: "active: false",
     label: "BlueSky",
   },
   {

@@ -101,8 +101,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "peter-avatar.jpg"],
       manifest: {
-        name: "Peter Steinberger",
-        short_name: "steipete",
+        name: "Prashant Bhushan",
+        short_name: "prashant",
         description: "AI-powered tools from Swift roots to web frontiers. Everything I build is open source.",
         theme_color: "#006cac",
         background_color: "#fdfdfd",
