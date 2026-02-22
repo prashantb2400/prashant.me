@@ -1,6 +1,3 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
-
 interface SocialLink {
   href: string;
   label: string;
@@ -29,11 +26,10 @@ interface Site {
   timezone: string;
 }
 
-// Site configuration
 export const SITE: Site = {
-  website: "https://prashantbasthana.me/",
+  website: "https://prashant-me.vercel.app/",
   author: "Prashant Bhushan",
-  profile: "https://prashantbasthana.me/about",
+  profile: "https://prashant-me.vercel.app/about",
   desc: "Law & tech enthusiast from Jaunpur, India. Learning, building and figuring it out.",
   title: "Prashant Bhushan",
   ogImage: "prashant-avatar.jpg",
@@ -56,7 +52,6 @@ export const SITE: Site = {
 export const SITE_TITLE = SITE.title;
 export const SITE_DESCRIPTION = SITE.desc;
 
-// Navigation links
 export const NAV_LINKS: SocialLink[] = [
   {
     href: "/",
@@ -68,7 +63,6 @@ export const NAV_LINKS: SocialLink[] = [
   },
 ];
 
-// Social media links
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     href: "https://github.com/prashantb2400",
@@ -79,20 +73,14 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: "Twitter",
   },
   {
-    href: "active: false",
-    label: "BlueSky",
-  },
-  {
     href: "/rss.xml",
     label: "RSS",
   },
 ];
 
-// Icon map for social media
 export const ICON_MAP: Record<string, string> = {
   GitHub: "github",
   Twitter: "twitter",
-  BlueSky: "bsky",
   RSS: "rss",
   Email: "mail",
 };
