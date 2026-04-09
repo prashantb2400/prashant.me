@@ -2,7 +2,7 @@
 title: "Sovereignity"
 author: "Prashant Bhushan"
 pubDatetime: 2026-02-19T10:00:00Z
-description: "Waht is Sovereignity for general public"
+description: "What is Sovereignty for general public"
 tags: ["personal", "opinion"]
 draft: false
 ---
