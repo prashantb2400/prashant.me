@@ -1,4 +1,5 @@
 ---
+
 title: "Sovereignity"
 author: "Prashant Bhushan"
 pubDatetime: 2026-02-19T10:00:00Z
@@ -15,4 +16,4 @@ Day to day sovereignty appears in small battles: whether a state can refuse a ce
 
 Today sovereignty is less about isolation and more about choice, the capacity to decide for ourselves and to be held accountable by our own people.
 
-Prashant Bhuhshan
+Prashant Bhushan

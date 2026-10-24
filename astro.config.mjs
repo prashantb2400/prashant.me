@@ -99,11 +99,11 @@ export default defineConfig({
     react(),
     AstroPWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.ico", "peter-avatar.jpg"],
+      includeAssets: ["favicon.ico", "prashant-avatar.jpg"],
       manifest: {
-        name: "Prashant Bhushan",
+        name: SITE.title,
         short_name: "prashant",
-        description: "AI-powered tools from Swift roots to web frontiers. Everything I build is open source.",
+        description: SITE.desc,
         theme_color: "#006cac",
         background_color: "#fdfdfd",
         display: "standalone",
@@ -117,13 +117,13 @@ export default defineConfig({
             type: "image/x-icon",
           },
           {
-            src: "peter-avatar.jpg",
+            src: "prashant-avatar.jpg",
             sizes: "192x192",
             type: "image/jpeg",
             purpose: "any",
           },
           {
-            src: "peter-avatar.jpg",
+            src: "prashant-avatar.jpg",
             sizes: "512x512",
             type: "image/jpeg",
             purpose: "any maskable",
@@ -132,7 +132,7 @@ export default defineConfig({
       },
       workbox: {
         navigateFallback: "/404",
-        globPatterns: ["**/*.{css,js,html,svg,png,jpg,jpeg,gif,webp,woff,woff2,ttf,eot,ico}"],
+        globPatterns: ["**/*.{css,js,html,woff,woff2}", "favicon.ico", "prashant-avatar.jpg"],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,

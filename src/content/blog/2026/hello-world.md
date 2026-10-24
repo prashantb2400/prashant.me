@@ -1,4 +1,5 @@
 ---
+
 title: "Hello World"
 author: "Prashant Bhushan"
 pubDatetime: 2026-02-18T10:00:00Z
@@ -14,7 +15,6 @@ My name is Prashant Bhushan. I am a law and tech enthusiast from Jaunpur, Uttar 
 I do not always know where I am headed. But I keep building, keep reading, keep learning.
 
 This blog will be a place where I write about:
-
 - Law — commercial, civil, and how it intersects with technology
 - AI — what I am building, what I am learning
 - Geopolitics and economy — things that fascinate me
