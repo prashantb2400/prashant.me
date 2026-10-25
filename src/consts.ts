@@ -30,7 +30,7 @@ export const SITE: Site = {
   website: "https://prashant-me.vercel.app/",
   author: "Prashant Bhushan",
   profile: "https://prashant-me.vercel.app/about",
-  desc: "Law & tech enthusiast from Jaunpur, India. Learning, building and figuring it out.",
+  desc: "Advocate practicing civil and commercial law from Jaunpur, India. Building software at the intersection of law, enterprise operations, and agentic AI.",
   title: "Prashant Bhushan",
   ogImage: "prashant-avatar.jpg",
   lightAndDarkMode: true,

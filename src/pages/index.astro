@@ -1,12 +1,14 @@
 ---
 import { getCollection } from "astro:content";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconRss from "@/assets/icons/IconRss.svg";
 import Card from "@/components/Card.astro";
 import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import Hr from "@/components/Hr.astro";
 import LinkButton from "@/components/LinkButton.astro";
+import NewsletterForm from "@/components/NewsletterForm.astro";
 import Socials from "@/components/Socials.astro";
 import StructuredData from "@/components/StructuredData.astro";
 import { SITE, SOCIALS } from "@/config";
@@ -19,26 +21,57 @@ const sortedPosts = getSortedPosts(posts);
 const posts2025AndLater = sortedPosts.filter(({ data }) => data.pubDatetime.getFullYear() >= 2025);
 const featuredPosts = posts2025AndLater.filter(({ data }) => data.featured);
 const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
+
+const projects = [
+  {
+    title: "Tender-OS",
+    description:
+      "Autonomous government procurement decision intelligence platform for GeM & UP e-Tender portals. Features missing-estimate detection, L1 costing waterfalls, and 8-point ATC trap auditing with automated legal grievance drafting.",
+    tags: ["Procurement Law", "Python", "Multi-Agent AI", "Legal-Tech"],
+    link: "https://github.com/prashantb2400/Tender-OS",
+  },
+  {
+    title: "RetailFlow (SHOP-ERP)",
+    description:
+      "Enterprise GST invoicing & split-cockpit POS billing engine. Built with offline-first IndexedDB, Supabase cloud sync, and a Model Context Protocol (MCP) server for autonomous AI agent tool-calling.",
+    tags: ["React 19", "MCP Standard", "GST Invoicing", "Supabase"],
+    link: "https://github.com/prashantb2400/SHOP-ERP",
+  },
+  {
+    title: "GymERP",
+    description:
+      "Full-stack fitness operations platform with Next.js web console, Android kiosk/manager APKs, multi-modal biometric check-ins (face, fingerprint, QR), and automated localized USB backup daemons.",
+    tags: ["Next.js", "Android APKs", "Biometrics", "Automation"],
+    link: "https://github.com/prashantb2400/GYM-",
+  },
+  {
+    title: "Bahi-Khata Modern",
+    description:
+      "Modernized digital dual-entry cashbook (Jama & Naam) tailored for Indian retail establishments. Features real-time liquidity calculation, 1-click PDF/Excel GST exports, and offline-first PWA persistence.",
+    tags: ["Dual-Entry", "PWA", "Accounting", "Offline-First"],
+    link: "https://github.com/prashantb2400/Expense-Tracker",
+  },
+];
 ---
 
-<Layout description="Prashant Bhushan: Law & tech enthusiast from Jaunpur, India. Learning, building and figuring it out.">
+<Layout description={`${SITE.title}: ${SITE.desc}`}>
   <StructuredData type="WebSite" data={{}} />
   <StructuredData type="Person" data={{}} />
   <Header />
   <main id="main-content" data-layout="index">
     <section id="hero" class="pt-6 pb-4">
-      <div class="flex flex-col sm:flex-row items-start gap-4">
+      <div class="flex flex-col sm:flex-row items-start gap-5">
         <a href="/about" class="block mx-auto sm:mx-0 group">
           <img 
             src="/prashant-avatar.jpg" 
             alt="Prashant Bhushan" 
-            class="w-40 h-40 rounded-full object-cover flex-shrink-0 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl"
+            class="w-36 h-36 rounded-full object-cover flex-shrink-0 transition-all duration-300 group-hover:scale-105 group-hover:shadow-xl border-2 border-accent/20"
           />
         </a>
         <div class="flex-1 text-center sm:text-left">
           <div class="flex items-center gap-2 justify-center sm:justify-start">
-            <h1 class="my-2 inline-block text-2xl font-bold sm:my-4 sm:text-3xl">
-              Hi, I'm @prashant.
+            <h1 class="my-1 inline-block text-2xl font-bold sm:my-2 sm:text-3xl">
+              Prashant Bhushan
             </h1>
             <a
               target="_blank"
@@ -55,12 +88,20 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
               <span class="sr-only">RSS Feed</span>
             </a>
           </div>
-          <p>
-            Law & tech enthusiast from Jaunpur, India.<br />
-            
+
+          <div class="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3 py-0.5 text-xs font-medium text-accent my-1">
+            <span>⚖️ Advocate</span>
+            <span class="opacity-40">•</span>
+            <span>Civil & Commercial Law</span>
+            <span class="opacity-40">•</span>
+            <span>Software Builder</span>
+          </div>
+
+          <p class="mt-3 text-foreground/90 leading-relaxed text-sm sm:text-base">
+            Advocate practicing civil and commercial law based in Jaunpur, Uttar Pradesh. In parallel, I engineer software systems specializing in public procurement intelligence, enterprise ERPs, and agentic AI.
           </p>
+
           {
-            // only display if at least one social link is enabled
             SOCIALS.filter((social) => social.active).length > 0 && (
               <div class="mt-4 flex flex-row items-center justify-center sm:justify-start">
                 <Socials />
@@ -73,11 +114,64 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
 
     <Hr />
 
+    <section id="builds" class="pt-10 pb-6">
+      <div class="flex items-baseline justify-between mb-6">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-wide">Featured Builds</h2>
+          <p class="text-xs sm:text-sm text-foreground/70 mt-1">
+            Software systems engineered for legal operations, procurement, and commercial enterprise.
+          </p>
+        </div>
+        <a href="/posts/2026/my-builds" class="text-sm font-medium text-accent hover:underline flex-shrink-0 ml-4">
+          Read deep dive →
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {
+          projects.map((proj) => (
+            <div class="group relative flex flex-col justify-between rounded-lg border border-border bg-muted/15 p-5 transition-all duration-200 hover:border-accent/60 hover:bg-muted/30">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <h3 class="font-semibold text-base sm:text-lg text-accent group-hover:underline">
+                    <a href={proj.link} target="_blank" rel="noopener noreferrer">
+                      {proj.title}
+                    </a>
+                  </h3>
+                  <a
+                    href={proj.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="opacity-60 group-hover:opacity-100 group-hover:text-accent transition-opacity p-1"
+                    aria-label={`${proj.title} on GitHub`}
+                    title="View on GitHub"
+                  >
+                    <IconGitHub width={18} height={18} class="inline-block fill-current" />
+                  </a>
+                </div>
+                <p class="text-xs sm:text-sm text-foreground/80 leading-relaxed mb-4">
+                  {proj.description}
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-3 border-t border-border/50">
+                {proj.tags.map((t) => (
+                  <span class="inline-block rounded bg-muted/80 px-2 py-0.5 text-[11px] font-medium text-foreground/70">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <Hr />
+
     {
       featuredPosts.length > 0 && (
         <>
-          <section id="featured" class="pt-12 pb-6">
-            <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
+          <section id="featured" class="pt-10 pb-6">
+            <h2 class="text-2xl font-semibold tracking-wide">Featured Writing</h2>
             <ul>
               {featuredPosts.map((data) => (
                 <Card variant="h3" {...data} showImage={false} />
@@ -91,7 +185,8 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
 
     {
       recentPosts.length > 0 && (
-        <section id="recent-posts" class="pt-12 pb-6">
+        <section id="recent-posts" class="pt-10 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">Recent Posts</h2>
           <ul>
             {recentPosts.map(
               (data, index) =>
@@ -108,6 +203,18 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
         <IconArrowRight class="inline-block" />
       </LinkButton>
     </div>
+
+    <Hr />
+
+    <section id="newsletter-section" class="py-10">
+      <div class="rounded-lg border border-border bg-muted/20 p-6">
+        <h3 class="text-lg font-semibold mb-1">Stay in touch</h3>
+        <p class="text-xs sm:text-sm text-foreground/70 mb-4">
+          Occasional notes on civil & commercial law, public procurement, and agentic AI systems.
+        </p>
+        <NewsletterForm variant="compact" />
+      </div>
+    </section>
   </main>
   <Footer />
 </Layout>
@@ -121,4 +228,3 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
     }
   });
 </script>
- 
