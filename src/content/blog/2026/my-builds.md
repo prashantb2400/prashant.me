@@ -35,9 +35,9 @@ The platform provides a high-contrast executive command center split into five s
 
 ---
 
-### 3. GymERP (GYM-)
+### 3. GymERP (GYM-ERP-2)
 
-**Repository**: [github.com/prashantb2400/GYM-](https://github.com/prashantb2400/GYM-)
+**Repository**: [github.com/prashantb2400/GYM-ERP-2](https://github.com/prashantb2400/GYM-ERP-2)
 
 GymERP is a full-stack, multi-tenant operations platform designed to digitize fitness centers, athletic clubs, and boutique gyms. Moving beyond fragile spreadsheet tracking, GymERP combines a centralized Next.js web dashboard with cross-platform desktop executables and native Android APKs built for management staff and unattended member kiosks. The platform streamlines the entire gym lifecycle, from initial member onboarding and biometric enrollment to automated recurring subscription billing and trainer shift scheduling.
 
